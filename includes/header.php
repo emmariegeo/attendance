@@ -1,3 +1,7 @@
+<?php
+    // Session persists across pages
+    include_once 'includes/session.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,9 +33,23 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="viewrecords.php">View Attendees</a>
+                            <a class="nav-link" aria-current="page" href="viewrecords.php">View Attendees</a>
                         </li>
                     </ul>
+                    <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <?php
+                            if (!isset($_SESSION['userid'])) {
+                        ?>
+                            <a class="nav-item nav-link" aria-current="page" href="login.php">Login</a>
+                        <?php 
+                            } else {
+                        ?>  
+                            <span class="navbar-text">Hello, <?php echo $_SESSION['username'] ?>!</span>
+                            <a class="nav-item nav-link" aria-current="page" href="logout.php">Logout</a>
+                        <?php
+                            } 
+                        ?>
+                    </div>
                 </div>
             </div>
         </nav>

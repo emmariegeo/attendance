@@ -12,6 +12,7 @@
     $user = getenv('DB_USER');
     $pass = getenv('DB_PASS');
     $charset = 'utf8mb4';
+
     // Connector String 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
@@ -24,5 +25,7 @@
     }
 
     require_once 'crud.php';
+    require_once 'user.php';
     $crud = new crud($pdo);
+    $user = new user($pdo);
 ?>
