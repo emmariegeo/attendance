@@ -1,7 +1,9 @@
 # attendance
 PHP Bootstrap Form and CRUD Application Development Exercise.
 
-[Deployed with Heroku](https://attendanceform.herokuapp.com/)
+~~Deployed with Heroku~~
+
+Update: Database no longer deployed via Heroku due to plan changes.
 ---
 In this exercise, I followed along with the course Modern PHP Web Development with MySQL, GitHub and Heroku by Trevoir Williams, Packt Publishing.
 
